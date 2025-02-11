@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/shared/navbar-style.css">
+    <link rel="stylesheet" href="/styles/pages/main-page.css">
+    <link rel="stylesheet" href="/styles/shared/general.css">
+ 
+    <title>Document</title>
+</head>
+<body>
+   
+    <nav class="navbar">
+        <script src="/scripts/navbar_script.js"></script>
+    </nav>
+
+    <h1>
+      
+
+        <div class='first-grid'>
+           
+             
+            <div class="first-cal-grid" id="calculate-data-container">
+                <label for="Entity">Entity</label>
+                <input class="cal-entity-input" size="10" minlength="5" maxlength="10" name="Entity"  id="Entity">
+                <label for="SubEntity">Sub-Entity</label>
+                <input class="cal-sub-entity-input"  size="10" minlength="5" maxlength="10" name="SubEntity" id="SubEntity">    
+                <label for="Account">Account</label>
+                <input class="cal-account-input"  size="12" minlength="5" maxlength="12" namne="Account" id="Account"> 
+                <label for="Billingitem">Billing Item</label>
+                <input class="cal-item-selection"  size="12" minlength="5" maxlength="12" namne="item" id="Item"> 
+                <label for="BillingitemQty">Item Quantity</label>
+                <input class="cal-item-quantity"  input type="number" size="12" minlength="5" maxlength="12" namne="qty" id="Qty"> 
+                <label for="AccountValue">Account Value</label>
+                <input class="cal-account-value"  input type="number" size="12" minlength="5" maxlength="12" namne="acctval" id="Acctval"> 
+                <button onclick="calculator()"
+                    class="cal-display-button" min-lenght="25">Calculate</button>
+              
+            </div>
+        
+            <div id="calculated-results-data-container">
+                <div class="data-row">
+                    <span class="cal-label">Calculated Fee :</span>
+                    <span class="cal-value" id="cal-fee"></span>
+                </div>
+                <div class="data-row">
+                    <span class="cal-label">Legend:</span>
+                    <span class="cal-value" id="legend-value"></span>
+                </div>
+                <div class="data-row">
+                    <span class="schedule-label">Fee Schedule</span>
+                </div>
+                <div class="data-row">
+                    <span class="label">Range Type :</span>
+                    <span class="value" id="range-type-value"></span>
+                </div>
+                <div class="data-row">
+                    <span class="label">To Range :</span>
+                    <span class="value" id="To-range-value"></span>
+                </div>
+                <div class="data-row">
+                    <span class="label">Rate Type :</span>
+                    <span class="value" id="Rate-type-value"></span>
+                </div>
+                <div class="data-row">
+                    <span class="label">Rate Amount :</span>
+                    <span class="value" id="Rate-value"></span>
+                </div>
+                <div class="data-row">
+                    <span class="label">Operator :</span>
+                    <span class="value" id="Operator-value"></span>
+                </div>
+                <div class="data-row">
+                    <span class="label">Addon Type :</span>
+                    <span class="value" id="Addon-Type-value"></span>
+                </div>
+                <div class="data-row">
+                    <span class="label">Addon Rate Amount :</span>
+                    <span class="value" id="Addon-rate-value"></span>
+                </div>
+                <div class="data-row">
+                    <span class="label">Minimum Fee Amount :</span>
+                    <span class="value" id="Min-fee-value"></span>
+                </div>
+                <div class="data-row">
+                    <span class="label">Maximum Fee Amount :</span>
+                    <span class="value" id="Max-fee-value"></span>
+                </div>
+             </div>  
+         
+            
+        </div>
+
+         
+    </h1>
+  
+       
+    <script src="/scripts/calculator.js"></script>
+          
+
+</body>
+
+
+</html>

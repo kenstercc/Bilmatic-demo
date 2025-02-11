@@ -1,0 +1,7 @@
+﻿billing_item_code,billing_item_category,billing_item_description,billing_item_type_code,billing_item_frequency,allowable_range_schedule,allowable_add_on
+wecan,hrcan,Werther's Original Hard Caramel Candy,stdbl,daily,yes,yes
+jocan,hrcan,Jolly Rancher Hard Candy,stdbl,daily,yes,yes
+starc,socan,Starburst Pops,stdbl,daily,yes,yes
+gucan,socan,Gummy Worms ,stdbl,daily,yes,yes
+trigu,regum,trident,stdbl,mnth,yes,no
+eclgu,sugum,eclipse,stdbl,wkly,no,yes

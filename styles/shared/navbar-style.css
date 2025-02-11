@@ -1,0 +1,52 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-image: linear-gradient(to bottom, rgb(146, 219, 189), white);
+    background-attachment: fixed;
+    font-family: sans-serif;
+    margin-bottom: 50px;
+}
+section{
+    width:80vw;
+    margin:5% auto;
+    padding-top:40;
+    text-align: center;
+    line-height: 25px;
+}
+
+.dropdown {
+    background:  rgb(232, 232, 177);
+    color: red;
+}
+
+h1{
+    margin-bottom: 20px;
+}
+
+ul li a:hover {
+    background:  rgb(232, 232, 177);
+}
+
+/* imdividual dropdown box */
+
+ul li ul.dropdown li {
+    display: block;
+    }
+
+/* Whole dropdown box */
+
+ul li ul.dropdown {
+    position: absolute;
+    z-index: 999;
+    display: none;
+    color: black;
+    background:  rgb(232, 232, 177);
+   }
+
+ul li:hover ul.dropdown {
+    display: block;
+
+}

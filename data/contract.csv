@@ -1,0 +1,18 @@
+﻿contract_value_1,contract_value_1_type,contract_value_2,contract_value_2_type,contract_value_3,contract_value_3_type,contract_value_4,contract_value_4_type,contract_value_5,contract_value_5_type,contract_billing_item,contract_type,contract_status,contract_update_timestamp,contract_range_type,contract_to_range,contract_rate_type,contract_rate_amount,contract_billing_operator,contract_addon_type,contract_addon_rate_amount,contract_minmum_fee,contract_maximum_fee
+company01,com ,office01,off ,0,n/a,0,n/a,0,n/a,eclgu,regu,a,12/31/2019 23:40,item,1000,flat$,50,+,flat$,2000,0,5000
+company01,com ,office01,off ,0,n/a,0,n/a,0,n/a,wecan,regu,a,12/31/2019 23:40,item,99999999,flat$,40,+,flat$,2000,0,5000
+company01,com ,office01,off ,0,n/a,0,n/a,0,n/a,jocan,regu,a,12/31/2019 23:40,item,1000,flat$,60,+,flat$,2000,0,5000
+company01,com ,office01,off ,0,n/a,0,n/a,0,n/a,starc,regu,a,12/31/2019 23:40,item,1000,flat$,70,+,flat$,2000,0,5000
+company02,com ,office02,off ,0,n/a,0,n/a,0,n/a,gucan,regu,a,12/31/2019 23:40,Asset,1000,bps,300,+,flat$,2000,0,5000
+company02,com ,office02,off ,0,n/a,0,n/a,0,n/a,trigu,regu,a,12/31/2019 23:40,Asset,1000,bps,400, ,n/a,2000,0,5000
+company02,com ,office02,off ,0,n/a,0,n/a,0,n/a,eclgu,regu,a,12/31/2019 23:40,n/a,99999999,bps,500,+,flat$,2000,0,5000
+company03,com ,office03,off ,0,n/a,0,n/a,0,n/a,eclgu,regu,a,12/31/2019 23:40,item,1000,flat$,50,+,flat$,2000,0,5000
+company03,com ,office03,off ,0,n/a,0,n/a,0,n/a,wecan,regu,a,12/31/2019 23:40,item,99999999,flat$,40,+,flat$,2000,0,5000
+company03,com ,office03,off ,0,n/a,0,n/a,0,n/a,jocan,regu,a,12/31/2019 23:40,item,1000,flat$,60,+,flat$,2000,0,5000
+company03,com ,office03,off ,0,n/a,0,n/a,0,n/a,starc,regu,a,12/31/2019 23:40,item,1000,flat$,70,+,flat$,2000,0,5000
+company04,com ,office04,off ,0,n/a,0,n/a,0,n/a,gucan,regu,a,12/31/2019 23:40,Asset,1000,bps,300,+,flat$,2000,0,5000
+company04,com ,office04,off ,0,n/a,0,n/a,0,n/a,trigu,regu,a,12/31/2019 23:40,Asset,1000,bps,400, ,n/a,2000,0,5000
+company04,com ,office04,off ,0,n/a,0,n/a,0,n/a,eclgu,regu,a,12/31/2019 23:40,n/a,99999999,bps,500,+,flat$,2000,0,5000
+company04,com ,office05,off ,0,n/a,0,n/a,0,n/a,gucan,regu,a,12/31/2019 23:40,Asset,1000,bps,300,+,flat$,2000,0,5000
+company04,com ,office05,off ,0,n/a,0,n/a,0,n/a,trigu,regu,a,12/31/2019 23:40,Asset,1000,bps,400, ,n/a,2000,0,5000
+company04,com ,office05,off ,0,n/a,0,n/a,0,n/a,eclgu,regu,a,12/31/2019 23:40,n/a,99999999,bps,500,+,flat$,2000,0,5000

@@ -1,0 +1,171 @@
+
+.bilmatic-header {
+    background-color: rgb(12, 131, 81);
+    color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 85px;
+  }
+  
+  .bilmatic-header-left-section {
+    width: 180px;
+  }
+  
+  @media (max-width: 800px) {
+    .bilmatic-header-left-section {
+      width: unset;
+    }
+  }
+  
+  .header-link {
+    display: inline-block;
+    padding: 6px;
+    border-radius: 2px;
+    text-decoration: none;
+    border: 1px solid rgba(12, 131, 81, 100);
+  }
+  
+   
+  .bilmatic-logo {
+    width: 120px;
+    margin-top: 4px;
+    border: none;
+  }
+  
+  .trend-logo {
+    width: 120px;
+    margin-top: 4px;
+    border: none;
+  }
+
+
+  .bilmatic-mobile-logo {
+    display: none;
+  }
+  
+  @media (max-width: 575px) {
+    .bilmatic-logo {
+      display: none;
+    }
+  
+    .bilmatic-mobile-logo {
+      display: block;
+      height: 35px;
+      margin-top: 5px;
+    }
+  }
+  
+  .bilmatic-header-middle-section {
+    flex: 2;
+    max-width: 1000px;
+    display: flex;
+    margin-left: 0px;
+    margin-right: 10px;
+    justify-content: flex-end;
+  }
+  
+  .search-bar {
+    flex: .2;
+    width: 15;
+    font-size: 16px;
+    height: 32px;
+    padding-left: 15px;
+    border: none;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  
+  .search-button {
+    background-color: rgb(254, 189, 105);
+    border: none;
+    width: 45px;
+    height: 32px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    flex-shrink: 0;
+  }
+  
+  .search-icon {
+    height: 22px;
+    margin-left: 2px;
+    margin-top: 3px;
+  }
+  
+  .bilmatic-header-right-section {
+    width: 180px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: end;
+  }
+ 
+  .signin-text {
+    color: rgb(254, 189, 105);
+    margin-top: 2px;
+    margin-right: 25px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+  * {
+      padding: 0;
+      margin: 0;
+      font-family: 'Poppins', monospace;
+  }
+  
+  /* UL is un-ordered list use for the dropdown menu bar  */
+  
+  ul {
+    list-style: none;
+   
+    padding-top: 25px;
+        }
+
+ul li {
+    display: inline-block;
+    position: relative;
+    
+         }
+
+ul li a {
+    display: block;
+    padding: 5px 15px;
+    color: #FFF;
+    text-decoration: none;
+    text-align: center;
+    font-size: 15px;
+            }
+
+ul li ul.dropdown li {
+    display: block;
+    }
+
+ul li ul.dropdown {
+    background: rgb(12, 131, 81);
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+
+ul li a:hover {
+    background:  #014f5b;
+    color: red;
+}
+
+ul li:hover ul.dropdown {
+    display: block;
+    
+      
+}

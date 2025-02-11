@@ -1,0 +1,70 @@
+.selection-grid {
+    font-size: 16px;
+    padding-top: 20px;
+    padding-left:100px;
+    height: 20px;
+    color: rgb(3, 78, 35)
+}
+
+.entity-input {
+    font-size: 16px;
+    cursor: pointer
+    }
+
+.sub-entity-input {
+    font-size: 16px;
+    cursor: pointer
+      }
+
+.account-input {
+    font-size: 16px;
+    cursor: pointer
+    }
+
+
+.display-button {
+    border: none;
+    background-color: rgb(3, 78, 35);
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.ag-header-cell {
+  font-size: 14px;
+  color: white;
+  background-color: rgb(3, 78, 35);
+  justify-content: center;
+ }
+
+.ag-cell {
+    display: flex;
+    font-size: 16px;
+    align-items: center;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    color: rgb(3, 78, 35)
+     }
+
+.ag-theme-quartz {
+    --ag-row-hover-color: #a1d4be;
+    --ag-font-family: Sans-Serif;
+     }
+
+.ag-header-cell-label {
+        justify-content: center;
+      }
+
+.highlight-row {
+        background-color: yellow !important;
+    }
+
+.updated-cell {
+        background-color: yellow;
+    }
