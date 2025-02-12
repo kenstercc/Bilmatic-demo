@@ -73,7 +73,7 @@
 #calculate-data-container {
     background: rgb(221, 221, 212);
     height: 550px;
-    width: 300px;
+    width: 600px;
     border-block: solid;
     border: 5px solid rgb(95, 47, 5);
     border-bottom-left-radius: 10px 10px;
@@ -178,7 +178,7 @@
 
 .cal-item-selection {
     font-size: 16px;
-    height: 30px;
+    height: 120px;
     cursor: pointer
     }    
 
