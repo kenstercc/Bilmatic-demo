@@ -1,5 +1,5 @@
 // Fetch data from external file (e.g., JSON)
-fetch('/data/receivable-box-data.json')
+fetch('data/receivable-box-data.json')
     .then(response => response.json())
     .then(data => {
         const container = document.getElementById('receivable-data-container');
