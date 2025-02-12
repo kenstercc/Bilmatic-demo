@@ -97,7 +97,7 @@ let colDef = [
           rowDeselection: true,
           editable: true,
           resizable: true},
-        rowHeight: 40,
+          rowHeight: 40,
           rowData: [],
           enableCellChangeFlash: true,
           onCellValueChanged: onCellValueChanged,
@@ -114,7 +114,7 @@ let colDef = [
           params.api.sizeColumnsToFit();
           params.api.setRowData(data);
           params.api.refreshCells({force : true})
-      },
+           },
                   
    };  
     
@@ -134,10 +134,11 @@ window.viewcontract = function() {
   const SubEntity = document.getElementById("SubEntity").value;
   const Account = document.getElementById("Account").value;
   
-  // Querying the data using fetch and promises
-  fetch('http://localhost:3000/viewcontract/'+Entity+'/'+SubEntity+'/'+Account+'') 
-  // Deserializing the data we received
-  .then(response => response.json())
+  console.log ('Entity', Entity)
+
+  if (Entity === "company01") {
+  fetch('data/company01.json')
+    .then(response => response.json())
    // We have our data now, we initialize our table
   .then(data => {
    console.log (data)
@@ -145,7 +146,23 @@ window.viewcontract = function() {
    gridOptions.api.setRowData(data);
    gridOptions.api.refreshCells({force : true})
 
-  })}
+  })}else
+  
+  if (Entity === "company02") {
+    fetch('data/company02.json')
+      .then(response => response.json())
+     // We have our data now, we initialize our table
+    .then(data => {
+     console.log (data)
+      
+     gridOptions.api.setRowData(data);
+     gridOptions.api.refreshCells({force : true})
+  
+    })}
+
+    
+ 
+}
 
 
 // AG Grid data changes
@@ -182,109 +199,40 @@ function onCellValueChanged (event) {
   
   //Action Delete
   if (action === 'Delete') { 
-    const confirm = window.confirm("Are you sure, you want to delete this row?")
-    if (confirm) {
-      const Entity = document.getElementById("Entity").value;
-      const SubEntity = document.getElementById("SubEntity").value;
-      const Account = document.getElementById("Account").value;
-      //const Action = data.contract_status;
-      const Action = 'd';
-      const requestOptions = {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ title: 'Fetch PUT Request Example' })}
-      //Update Status Flag in DB
-        fetch('http://localhost:3000/deletecontract/'+Entity+'/'+SubEntity+'/'+Account+'/'+Item+``, requestOptions)
-        .then(data => {
-          alert("Delete sucessfully processed !!!");
-          console.log('Delete successful:', data);
-      // refresh after update 
-      fetch('http://localhost:3000/viewcontract/'+Entity+'/'+SubEntity+'/'+Account+'') 
-          // Deserializing the data we received
-          .then(response => response.json())
-          // We have our data now, we initialize our table
-          .then(data => {
-          console.log (data)
-            
-          gridOptions.api.setRowData(data);
-          gridOptions.api.refreshCells({force : true})
-          })})
-        .catch(error => {
-          console.error('Error delete schedule:', error);
-        })}}
+      alert("this is a demo, delete of the record will not be performed since server is not available!")  
+    }
 
    // Add function selected     
    if (action === 'Add') {
           alert("Add not implemented")
-          } 
+          }
 
-   }
+    }
 
 
 //Update Contract function
 
 window.updatecontract = function() { 
   
-    console.log('here in update function')
-
     const Entity = document.getElementById("Entity").value;
     const SubEntity = document.getElementById("SubEntity").value;
     const Account = document.getElementById("Account").value;
-    
-    console.log (Entity);
-    console.log (SubEntity);
-    console.log (Account);
-     
+   
+      
     //retrieve all rows from ag grid  
     const allRows = gridOptions.api.getRenderedNodes().map(node => node.data);
-    console.log('allALLROWS', allRows);
-
+   
     //Select only updated row based on Isudated flag
     const filteredData = allRows.filter(item => item.isUpdated === true);
-
-    console.log('filteredData', filteredData);
 
     if (Array.isArray(filteredData) && filteredData.length === 0) 
        {alert("Error - No updates found, please edit schedule !!")
         return}
 
-    const confirm = window.confirm("Are you sure, you want to perform the updates?")
-    if (confirm) {
-    fetch('http://localhost:3000/updatecontract/'+Entity+'/'+SubEntity+'/'+Account+'',  {
-          method: 'POST',
-          headers: {
-              'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ filteredData })
-      })
-      .then(data => {
-          alert('Update successfully!');
-        
-      // refresh after update 
-      console.log('refresh after update?')
-      fetch('http://localhost:3000/viewcontract/'+Entity+'/'+SubEntity+'/'+Account+'') 
-          // Deserializing the data we received
-          .then(response => response.json())
-          // We have our data now, we initialize our table
-          .then(data => {
-           console.log (data)
-          
-          //reset column defintions 
-          gridOptions.api.setColumnDefs([]);
-          gridOptions.api.setColumnDefs(colDef);
-          gridOptions.api.sizeColumnsToFit();
-          
-          //refresh data grid
-          gridOptions.api.setRowData(data);           
-          gridOptions.api.refreshCells({force : true})
+          alert ('This is a demo, the records will not be updated, since backend server is not available!!')
+    }
 
-          })})
-
-       .catch(error => {
-        console.error('Error update schedule:', error);
-        })}
-
-      }
+    
   
 
 // Define your custom validation function
@@ -292,10 +240,6 @@ function myCustomValidator(params) {
   const newValue = params.newValue;
   const oldvalue = params.oldValue;
   
-  console.log('new', newValue)
-  console.log('old', oldvalue)
- 
-
   // Perform your validation logic here
   if (newValue < 0) {
     alert("Value cannot be negative!");
@@ -323,10 +267,6 @@ function minCustomValidator(params) {
   const newValue = params.newValue;
   const max = params.data.contract_maximum_fee
 
-  console.log(newValue)
-  console.log(max)
- 
-
   // Perform your validation logic here
   if (newValue < 0) {
     alert("Value cannot be negative!");
@@ -352,10 +292,6 @@ function minCustomValidator(params) {
 function maxCustomValidator(params) {
   const newValue = params.newValue;
   const min = params.data.contract_minimum_fee
-
-  console.log(newValue)
-  console.log(min)
- 
 
   // Perform your validation logic here
   if (newValue < 0) {
