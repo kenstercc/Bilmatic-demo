@@ -137,7 +137,7 @@ window.viewcontract = function() {
   console.log ('Entity', Entity)
 
   if (Entity === "company01") {
-  fetch('data/company01.json')
+  fetch('/data/company01.json')
     .then(response => response.json())
    // We have our data now, we initialize our table
   .then(data => {
@@ -149,7 +149,7 @@ window.viewcontract = function() {
   })}else
   
   if (Entity === "company02") {
-    fetch('data/company02.json')
+    fetch('/data/company02.json')
       .then(response => response.json())
      // We have our data now, we initialize our table
     .then(data => {
