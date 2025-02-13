@@ -1,13 +1,9 @@
 [
-    { "name": "10-21-2024 10:00:01 Account 12222333 billing error" },
-    { "name": "10-21-2024 09:59:00 Account 43355555 schedule not found" },
-    { "name": "10-21-2024 09:50:00 account 66655444 account value not available" },
-    { "name": "10-21-2024 09:00:00 Billing cycle completed for 10-21-2024"},
-    { "name": "10-21-2024 09:00:00 Incomplete contracts = 15" },
-    { "name": "10-21-2024 09:00:00 Contracts pending approval = 10" },
-    { "name": "10-20-2024 11:05:30 Account AA456666 information missing" },
-    { "name": "10-20-2024 10:59:03 Account 98800000 distribution info incorrect" },
-    { "name": "10-20-2024 10:34:35 Company A billing error" },
-    { "name": "10-20-2024 09:00:00 Daily billing cycle completed" },
-    { "name": "10-20-2024 09:00:00 Incomplete contracts = 14" }
+    { "name": "    1. Contracts/standard billing tab (fee schedule maintenance)" },
+    { "name": "    2. Calculator tab (real-time what-if fee calculation)"},
+    { "name": "." },
+    { "name": "- Use company01 or company02 for the Entity, in lower case" },
+    { "name": "- For the calculator tab, select billing item 1 - 6, enter item quantity for billing item 1 - 3,  enter account value for 4 - 6" },
+    { "name": "- The update and delete functions will not actually update the record, since the server side was not deployed for this demo" },
+    { "name": " " }
     ]
